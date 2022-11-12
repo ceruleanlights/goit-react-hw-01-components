@@ -1,0 +1,22 @@
+.statsList {
+  margin-top: 0;
+  padding: 0;
+  background-color: rgb(245, 240, 240);
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.statsListItem {
+  list-style-type: none;
+  background: rgb(random(255), random(255), random(255));
+  display: grid;
+  border: 1px solid rgb(211, 205, 205);
+  padding: 15px 10px;
+}
+
+.statisticsTitle {
+  font-size: 20px;
+  padding: 15px;
+  margin-bottom: 0;
+  border: 1px solid rgb(211, 205, 205);
+}
