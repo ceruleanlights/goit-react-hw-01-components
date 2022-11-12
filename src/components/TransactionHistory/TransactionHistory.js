@@ -2,6 +2,9 @@ import styles from "./TransactionHistory.module.css";
 import PropTypes from "prop-types";
 
 const TransactionHistory = ({ transactions }) => {
+  const capitalizeFirst = (str) => {
+    return str.charAt(0).toUpperCase() + str.slice(1);
+  };
   return (
     <table className={styles.transactionHistory}>
       <thead>
@@ -14,7 +17,7 @@ const TransactionHistory = ({ transactions }) => {
       <tbody className={styles.tableBody}>
         {transactions.map(({ id, type, amount, currency }) => (
           <tr className={styles.tableRow} key={id}>
-            <td>{type}</td>
+            <td>{capitalizeFirst(type)}</td>
             <td>{amount}</td>
             <td>{currency}</td>
           </tr>
