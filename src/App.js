@@ -1,9 +1,13 @@
 import React from "react";
 import "./App.css";
+
 import Profile from "./components/Profile/Profile";
 import Statistics from "./components/Statistics/Statistics";
+import FriendList from "./components/FriendList/FriendList";
+
 import data from "./data/user.json";
 import statistics from "./data/statistics.json";
+import friends from "./data/friends.json";
 
 function App() {
   const {
@@ -27,6 +31,7 @@ function App() {
           likes={likes}
         />
         <Statistics title="UPLOAD STATS" stats={statistics} />
+        <FriendList friends={friends} />
       </header>
     </div>
   );

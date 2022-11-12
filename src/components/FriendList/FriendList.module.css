@@ -1,0 +1,26 @@
+.friendList {
+  list-style-type: none;
+  padding: 0;
+  display: grid;
+  align-items: horizontal;
+}
+
+.friendListItem {
+  width: 220px;
+  border: 1px solid rgb(211, 205, 205);
+  align-items: center;
+  display: flex;
+  border-radius: 25px;
+  margin-bottom: 5px;
+}
+
+.friendStatus {
+  justify-content: start;
+}
+
+.friendAvatar {
+  border: 1px solid rgb(211, 205, 205);
+  padding: 5px;
+  border-radius: 50%;
+  margin: 0 10px;
+}
