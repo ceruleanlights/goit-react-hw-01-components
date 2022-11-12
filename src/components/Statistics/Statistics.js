@@ -35,12 +35,15 @@ const Statistics = ({ title, stats }) => {
       {title && <h2 className={styles.statisticsTitle}>{title}</h2>}
 
       <ul className={styles.statsList}>
-        {stats.map((item) => (
-          <li style={{ backgroundColor: getColor() }} key={item.id} className={styles.statsListItem}>
-            <span className="label">{item.label}</span>
-            <span className="percentage">{item.percentage}%</span>
-          </li>
-        ))}
+        {stats.map((item) => {
+          const { id, label, percentage } = item;
+          return (
+            <li style={{ backgroundColor: getColor() }} key={id} className={styles.statsListItem}>
+              <span className="label">{label}</span>
+              <span className="percentage">{percentage}%</span>
+            </li>
+          );
+        })}
       </ul>
     </section>
   );
