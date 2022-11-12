@@ -1,4 +1,5 @@
 import styles from "./Statistics.module.css";
+import PropTypes from "prop-types";
 
 const Statistics = ({ title, stats }) => {
   const colors = [
@@ -47,6 +48,17 @@ const Statistics = ({ title, stats }) => {
       </ul>
     </section>
   );
+};
+
+Statistics.propTypes = {
+  stats: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+      percentage: PropTypes.number.isRequired,
+    })
+  ),
+  title: PropTypes.string,
 };
 
 export default Statistics;
